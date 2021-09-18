@@ -8,12 +8,26 @@ plt.style.use("fivethirtyeight")
 
 
 def prepare_data(df):
+    """It is used to separate dependent and independent features
+
+    Args:
+        df (pd.DataFrame): Pandas DataFrame
+
+    Returns:
+        tuple : It returns the tuples of dependent variables and independent variables.
+    """
     x = df.drop("y", axis=1)
     y = df["y"]
     return x, y
 
 
 def save_model(model, filename):
+    """This Saves the trained model.
+
+    Args:
+        model (python object): trained model.
+        filename (str): name of the file to save.
+    """
     model_dir = "models"
     os.makedirs(model_dir, exist_ok=True)  # ONLY CREATE IF MODEL_DIR DOES NOT EXISTS
     filepath = os.path.join(model_dir, filename)  # model/filename
