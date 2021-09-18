@@ -8,13 +8,13 @@ plt.style.use("fivethirtyeight")
 
 
 def prepare_data(df):
-    """It is used to separate dependent and independent features
+    """it is used to separate dependent and independent features
 
     Args:
         df (pd.DataFrame): Pandas DataFrame
 
     Returns:
-        tuple : It returns the tuples of dependent variables and independent variables.
+        tuple : it returns the tuples of dependent variables and independent variables.
     """
     x = df.drop("y", axis=1)
     y = df["y"]
