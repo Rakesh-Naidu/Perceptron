@@ -5,4 +5,3 @@ This Repository contains the implementation of Perceptron for Logic Gates.
 - XOR
 - NAND
 - NOR
-
